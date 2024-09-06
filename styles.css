@@ -1,0 +1,75 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background-color: #F8F8F8;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #000000, #424242);
+    color: white;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+section {
+    background-color: #A1A6B4;
+    margin: 20px 0;
+    padding: 0 20px 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "h2 h2"
+    "description code";
+}
+
+.description{
+    grid-area: description;
+    width: 95%;
+}
+
+.code {
+    grid-area: code;
+    width: auto;
+}
+
+pre {
+    background: linear-gradient(to right, #000000, #424242);
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    color: #f4f4f4;
+}
+
+button {
+    background: linear-gradient(to right, #000000, #424242);;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 3ms;
+}
+
+button:hover {
+    background: linear-gradient(to right, #F8F8F8, #F8F8F8);
+    color: black;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #000000, #424242);
+    color: white;
+    bottom: 0;
+    width: 100%;
+}
