@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -17,7 +21,7 @@ h1 {
 
 section {
     background-color: #A1A6B4;
-    margin: 20px 0;
+    margin: 20px 10px 20px 10px;
     padding: 0 20px 0 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -28,17 +32,21 @@ section {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "h2 h2"
+    "description code"
     "description code";
 }
 
 .description{
     grid-area: description;
     width: 95%;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .code {
     grid-area: code;
     width: auto;
+    padding-bottom: 10px;
 }
 
 pre {
@@ -50,13 +58,12 @@ pre {
 }
 
 button {
-    background: linear-gradient(to right, #000000, #424242);;
+    background: linear-gradient(to right, #000000, #424242);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: 3ms;
 }
 
 button:hover {
@@ -72,4 +79,8 @@ footer {
     color: white;
     bottom: 0;
     width: 100%;
+}
+
+.hidden {
+    display: none;
 }

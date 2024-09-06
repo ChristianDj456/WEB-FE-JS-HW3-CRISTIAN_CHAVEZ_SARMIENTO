@@ -1,4 +1,6 @@
 function runFirstExample() {
+    document.getElementById('output1').classList.remove('hidden');
+
     document.getElementById('output1').innerText = ''; // Clear the previous output
 
     // Display the concept of asynchronous execution
@@ -13,6 +15,8 @@ function runFirstExample() {
 }
 
 function runSecondExample() {
+    document.getElementById('output2').classList.remove('hidden');
+
     document.getElementById('output2').innerText = ''; // Clear the previous output
 
     // Function that simulates fetching data from an API (with a 1-second delay)
@@ -21,7 +25,7 @@ function runSecondExample() {
 
         // We simulate an asynchronous operation that takes 1 second
         setTimeout(() => {
-            const data = 'Data fetched: { "user": "John", "age": 30 }';
+            const data = 'Data fetched: { "user": "Cristian", "age": 20 }';
             callback(data);
         }, 1000);
     }
@@ -36,6 +40,8 @@ function runSecondExample() {
 }
 
 function runThirdExample() {
+    document.getElementById('output3').classList.remove('hidden');
+
     document.getElementById('output3').innerText = ''; // Clear the previous output
 
     // We simulate an asynchronous operation with promises
@@ -65,6 +71,8 @@ function runThirdExample() {
 }
 
 function runFourthExample() {
+    document.getElementById('output4').classList.remove('hidden');
+
     document.getElementById('output4').innerText = ''; // Clear the previous output
 
     // We simulate an asynchronous operation with async/await
@@ -97,6 +105,8 @@ function runFourthExample() {
 
 
 function runFifthExample() {
+    document.getElementById('output5').classList.remove('hidden');
+    
     // Clear the previous output
     document.getElementById('output5').innerText = '';
 

@@ -13,7 +13,7 @@
     </header>
 
     <section class="grid-sections">
-      <h2>1. JavaScript Async</h2>
+      <h1>1. JavaScript Async </h1>
       <div class="description">
         <p>
           JavaScript is a single-threaded, non-blocking, asynchronous language.
@@ -29,9 +29,10 @@
           <li>Async/Await</li>
           <li>Event Loop</li>
         </ul>
-        <button onclick="runFirstExample()">Run Example</button>
+        
       </div>
       <div class="code">
+        <button onclick="runFirstExample()">Run Example</button>
         <pre><code>
           // Example 1: setTimeout and asynchronous execution
           console.log('1. Starting execution');
@@ -47,21 +48,23 @@
           // Code continues executing without waiting for the asynchronous task.
           // 3. Asynchronous Task Completed (after 2 seconds)
         </code></pre>
-        <pre id="output1"></pre>
+        <pre id="output1" class="hidden"></pre>
       </div>
     </section>
 
     <section class="grid-sections">
-      <h2>2. Callback</h2>
+      <h1>2. Callback</h1>
       <div class="description">
         <p>
           A callback is a function that is passed as an argument to another function and is executed once a specific task is completed. Callbacks are commonly used to handle asynchronous tasks in JavaScript, such as API requests, timers, and file reading operations, where you want certain code to execute after an operation finishes.
-          How Callbacks Work
+        </p>
+        <h3>How Callbacks Work</h3>
+        <p>
           In JavaScript, functions are first-class citizens, meaning they can be passed as arguments to other functions, returned from functions, and stored in variables. A callback function allows us to delay the execution of a function until a certain operation completes. This is especially useful for tasks that take time, like fetching data from a server
         </p>
-        <button onclick="runSecondExample()">Run Example</button>
       </div>
       <div class="code">
+        <button onclick="runSecondExample()">Run Example</button>
         <pre><code>
           // Example 2: Callback to handle asynchronous data
           function fetchData(callback) {
@@ -81,27 +84,32 @@
           
           // Output:
           // Fetching data from the API....
-          // Fetched data: { “user”: “John”, “age”: 30 }
+          // Fetched data: { “user”: “Cristian”, “age”: 20 }
         </code></pre>
-        <pre id="output2"></pre>
+        <pre id="output2" class="hidden"></pre>
       </div>
     </section>
 
     <section class="grid-sections">
-      <h2>3. Promise</h2>
+      <h1>3. Promise</h1>
       <div class="description">
         <p>
           A Promise is a special JavaScript object that represents the eventual result (success or failure) of an asynchronous operation. Promises simplify how we handle asynchronous code, offering a more structured and readable way to manage asynchronous actions compared to the traditional callback approach. Promises are especially useful when you have to perform multiple asynchronous operations in sequence, handle errors, or deal with complex scenarios like loading data from a server.
         </p>
         <h3>The Lifecycle of a Promise</h3>
         <ul>
-          <li>Pending: Initial state, neither fulfilled nor rejected.</li>
-          <li>Fulfilled: The operation completed successfully.</li>
-          <li>Rejected: The operation failed.</li>
+          <li><b>Pending:</b> Initial state, neither fulfilled nor rejected.</li>
+          <li><b>Fulfilled:</b> The operation completed successfully.</li>
+          <li><b>Rejected:</b> The operation failed.</li>
         </ul>
-        <button onclick="runThirdExample()">Run Example</button>
+        <h3>How Promises Work</h3>
+        <ol>
+          <li><b>resolve():</b>This is called when the asynchronous operation is successful. It transitions the promise from the pending state to the fulfilled state, and the result is passed to the next .then() block.</li>
+          <li><b>reject():</b>This is called when the asynchronous operation fails. It transitions the promise from the pending state to the rejected state, and the error is passed to the .catch() block for handling.</li>
+        </ol>
       </div>
       <div class="code">
+        <button onclick="runThirdExample()">Run Example</button>
         <pre><code>
           // Example 3: Using Promises
           function fetchDataPromise() {
@@ -131,12 +139,12 @@
           // Getting data (Promise)....
           // Data obtained: { “product”: “Laptop”, “price”: 1500 }
         </code></pre>
-        <pre id="output3"></pre>
+        <pre id="output3" class="hidden"></pre>
       </div>
     </section>
 
     <section class="grid-sections">
-      <h2>4. Async/Await</h2>
+      <h1>4. Async/Await</h1>
       <div class="description">
         <p>
           Async/Await is a more modern way to work with asynchronous operations in JavaScript, introduced in ES2017. It is built on top of promises, providing a cleaner and more readable syntax for handling asynchronous code. Async/Await allows you to write asynchronous code that looks and behaves more like synchronous code, making it easier to understand, maintain, and debug.
@@ -146,13 +154,13 @@
         </p>
         <h3>Key Features of Async/Await</h3>
         <ol>
-          <li>Synchronous Appearance: Although the code is still asynchronous, it is written in a style that looks more like synchronous code. This makes it easier to read and reason about.</li>
-          <li>Built on Promises: Async/Await is built on top of promises, so it offers all the features of promises (such as error handling and chaining) but in a more structured and readable form.</li>
-          <li>Error Handling: With Async/Await, error handling becomes simpler. You can use the try/catch blocks around await to handle errors, just like you would in synchronous code.</li>
+          <li><b>Synchronous Appearance:</b> Although the code is still asynchronous, it is written in a style that looks more like synchronous code. This makes it easier to read and reason about.</li>
+          <li><b>Built on Promises:</b> Async/Await is built on top of promises, so it offers all the features of promises (such as error handling and chaining) but in a more structured and readable form.</li>
+          <li><b>Error Handling:</b> With Async/Await, error handling becomes simpler. You can use the try/catch blocks around await to handle errors, just like you would in synchronous code.</li>
         </ol>
-        <button onclick="runFourthExample()">Run Example</button>
       </div>
       <div class="code">
+        <button onclick="runFourthExample()">Run Example</button>
         <pre><code>
           // Example 4: Using Async/Await
           async function fetchDataWithAsyncAwait() {
@@ -182,12 +190,12 @@
           // Fetching data with async/await....
           // Fetched data: { “product”: “Smartphone”, “price”: 1000 }
         </code></pre>
-        <pre id="output4"></pre>
+        <pre id="output4" class="hidden"></pre>
       </div>
     </section>
 
     <section class="grid-sections">
-      <h2>5. Event Loop</h2>
+      <h1>5. Event Loop</h1>
       <div class="description">
         <p>
           The Event Loop is a core mechanism in JavaScript that enables asynchronous and non-blocking operations, despite the language being single-threaded. JavaScript’s single-threaded nature means it can only perform one task at a time. However, with the help of the Event Loop, JavaScript can manage multiple tasks without blocking the main thread, such as handling user interactions, executing scripts, and running animations, all while waiting for asynchronous tasks like fetching data from a server or setting timers to complete.
@@ -195,9 +203,9 @@
         <p>
           Without the Event Loop, JavaScript would be unable to handle tasks such as network requests, timers, or I/O operations effectively, since these tasks take time to complete. The Event Loop is responsible for managing these operations in such a way that JavaScript remains responsive and efficient.
         </p>
-        <button onclick="runFifthExample()">Run Example</button>
       </div>   
       <div class="code">
+        <button onclick="runFifthExample()">Run Example</button>
         <pre><code>
 // Example 5: Demonstrating the Event Loop
 console.log('Start');
@@ -213,7 +221,7 @@ console.log('End');
 // End
 // Inside Timeout (processed later by the event loop)
           </code></pre>
-          <pre id="output5"></pre>
+          <pre id="output5" class="hidden"></pre>
       </div>
     </section>
 
